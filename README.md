@@ -29,6 +29,6 @@ $ pip install pydingbot
 
 >>> inform(webhook=webhook, secret=secret, title='My Title', text='My Text')
 
->>> inform(webhook=webhook, secret=secret, title='My Title', text='My Text', at_mobiles['158xxxx2009'], at_all=True)
+>>> inform(webhook=webhook, secret=secret, title='My Title', text='My Text', at_mobiles=['158xxxx2009'], at_all=True)
 ```
 如果你的配置正确，那么消息应该就已经发送到你的钉钉群里了。 
