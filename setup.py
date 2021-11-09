@@ -11,14 +11,14 @@ with open(requirements_path) as f:
     required = f.read().splitlines()
 
 setuptools.setup(
-    name='easydingbot',
-    version='0.0.5',
+    name='pydingbot',
+    version='0.0.1',
     author='Wentao Li',
-    author_email='clarmy.lee@seniverse.com',
+    author_email='clarmylee92510@gmail.com',
     description='A package to make dingbot easily to use',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/seniverse/easydingbot',
+    url='https://github.com/Clarmy/pydingbot',
     include_package_data=True,
     package_data={'': ['*.csv', '*.config', '*.nl', '*.json']},
     packages=setuptools.find_packages(),
@@ -26,10 +26,5 @@ setuptools.setup(
     classifiers=[
         'Programming Language :: Python :: 3',
     ],
-    python_requires='>=3.6',
-    entry_points={
-        'console_scripts': [
-            'easydingbot = easydingbot.main:cli'
-        ]
-    }
+    python_requires='>=3.6'
 )
