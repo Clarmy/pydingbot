@@ -1,7 +1,6 @@
 # pydingbot
 [![Build Status](https://app.travis-ci.com/Clarmy/pydingbot.svg?branch=main)](https://app.travis-ci.com/github/Clarmy/pydingbot)
 [![PyPI version](https://badge.fury.io/py/pydingbot.svg)](https://badge.fury.io/py/pydingbot)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Clarmy/pydingbot/issues)
 
 pydingbot 是一个让钉钉机器人更好用的包。
