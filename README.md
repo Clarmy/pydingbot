@@ -13,7 +13,7 @@ $ pip install pydingbot
 
 ## 使用
 
-在使用pydingbot之前，首先你需要在钉钉群里添加你的机器人，安全设置选择**加签**，然后点开“机器人设置”找到 **webhook** 和 **secret**（秘钥），这些是使用机器人所必须的信息，webhook和secret的来源如图所示：   
+在使用pydingbot之前，首先你需要在钉钉群里添加你的自定义机器人，安全设置选择**加签**，然后点开“机器人设置”找到 **webhook** 和 **secret**（秘钥），这些是使用机器人所必须的信息，webhook和secret的来源如图所示：   
 
 ![config](docs/static/config.png)   
 
