@@ -17,17 +17,34 @@ $ pip install pydingbot
 
 ![config](docs/static/config.png)   
 
-使用示例：
+### 简单示例
 
 ```python
->>> from pydingbot import inform
+from pydingbot import inform
 
->>> webhook = 'https://oapi.dingtalk.com/robot/send?access_token=170d919d864e90502b48603ecbcd7646701bd66cc590f495bac1b7c5049e171e'
+WEBHOOK = 'https://oapi.dingtalk.com/robot/send?access_token=170d919d864e90502b48603ecbcd7646701bd66cc590f495bac1b7c5049e171e'
+SECRET = 'SEC474937571de1506cdd724af0d5866f4fa2788968032a2d6d982da988bea4e5de'
 
->>> secret = 'SEC474937571de1506cdd724af0d5866f4fa2788968032a2d6d982da988bea4e5de'
-
->>> inform(webhook=webhook, secret=secret, title='My Title', text='My Text')
-
->>> inform(webhook=webhook, secret=secret, title='My Title', text='My Text', at_mobiles=['158xxxx2009'], at_all=True)
+inform(webhook=WEBHOOK, secret=SECRET, title='My Title', text='My Text')
 ```
-如果你的配置正确，那么消息应该就已经发送到你的钉钉群里了。 
+如果你的配置正确，那么消息应该就已经发送到你的钉钉群里了。   
+
+### 使用@功能
+
+@指定人员需要向`at_mobiles`参数传入指定@人员的手机号列表，例如：
+
+```python
+inform(webhook=webhook, secret=secret, title='My Title', text='My Text', at_mobiles=['15811112009', '15822222009'])
+```
+
+@所有人需要向`at_all`参数传入`True`，例如：
+
+```python
+inform(webhook=webhook, secret=secret, title='My Title', text='My Text', at_all=True)
+```
+
+还可以同时使用@指定人和@所有人的功能，例如：
+
+```python
+inform(webhook=webhook, secret=secret, title='My Title', text='My Text', at_mobiles=['15811112009', '15822222009'], at_all=True)
+```

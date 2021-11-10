@@ -80,14 +80,15 @@ def inform(webhook,
            text='TEXT',
            at_mobiles=None,
            at_all=False):
-    """Send message to dingbot
+    """向钉钉机器人发送消息（Markdown）
 
     Args:
-        dingbot_id (str, optional): Dingbot id that you setted in config, 
-                                    if you don't know, use the command line "pydingbot-ls-dingbot" to list all dingbots ids.
-                                    Defaults to 'default'.
-        title (str, optional): The title showing in dingbot. Defaults to 'TASK NAME'.
-        text (str, optional): The text showing in dingbot, it support markdown syntax. Defaults to 'TEXT'.
+        webhook (str): 钉钉机器人的webhook
+        secret (str): 钉钉机器人秘钥（加签模式）
+        title (str, optional): 消息标题. Defaults to 'TASK NAME'.
+        text (str, optional): 消息内容，Markdown语法. Defaults to 'TEXT'.
+        at_mobiles (list, optional): 指定要@的人的绑定手机号列表，例如['15811112009', '13877772456']. Defaults to None.
+        at_all (boolean, optional): 是否要@所有人，若为True则会@所有人，False则不会. Defaults to False.
     """
     dingbot = Dingbot(webhook, secret)
     return dingbot.send_msg(title, text, at_mobiles=at_mobiles, at_all=at_all)
