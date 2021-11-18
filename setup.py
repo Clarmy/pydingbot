@@ -12,7 +12,7 @@ with open(requirements_path) as f:
 
 setuptools.setup(
     name='pydingbot',
-    version='0.0.2',
+    version='0.0.3',
     author='Wentao Li',
     author_email='clarmylee92510@gmail.com',
     description='A package to make dingbot easily to use',
