@@ -68,7 +68,6 @@ class Dingbot:
                 'isAtAll': at_all
             }
         }
-        print(f'url: {self.url}')
         return requests.post(url=self.url, headers={
             'Content-Type': 'application/json'
         }, data=json.dumps(data)).text
